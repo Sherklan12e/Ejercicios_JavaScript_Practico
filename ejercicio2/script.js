@@ -1,1 +1,1 @@
-let name = "name"
+document.write("hellor word")
