@@ -6,6 +6,9 @@ var vocales = ["a","e","i","o","u"]
 
 for (var i = 0; i < frase.length; i++){
     var letra = frase[i].toLowerCase()
-    if 
+    if (vocales.includes(letra)){
+        contador++      
+    }
 
 }
+document.write(" Cantidad de vocales "+contador)
