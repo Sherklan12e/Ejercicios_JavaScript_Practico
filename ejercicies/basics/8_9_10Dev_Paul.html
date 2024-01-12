@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombres = [
+            "Paul","Orlando","Cris","Areli","Ramon"
+        ];
+        console.log(nombres);
+        console.log(nombres[0]);
+        console.log(nombres[1]);
+        console.log(nombres[2]);
+        console.log(nombres[3]);
+        console.log(nombres[4]);
+
+        nombres[5] = "Carlos"; 
+        // Asi se agregan nuevos elementos al arreglo
+        nombres[6] = "Margarita";
+        nombres.pop();
+        let eliminado = nombres.pop();
+        // Asi se eliminan lo elementos de un arreglo
+        console.log(nombres);
+        console.log(eliminado);
+    </script>
+</body>
+</html>
