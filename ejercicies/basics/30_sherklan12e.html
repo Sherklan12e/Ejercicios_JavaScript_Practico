@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let nombre = ['Juan','Devs','Pedro','leo','perez', 'aron']
+        contador = 0; //Este va ser pa contar cuantos elementos comienzan con la letra 'A'
+        
+
+
+        for (i = 0; i < nombre.length; i++){
+            if (nombre[i][0].toUpperCase() == 'A'  ){
+
+                console.log(nombre[i])
+                contador = contador+1
+            }
+        }
+
+        console.log('Los elementos que tiene un "A"   al inicio son ' + contador)
+        
+        
+        // toUpperCase() para que convierta la letra en Mayuscula
+
+        //  nombre[1] = Juan
+        //  nombre[1][0] = juan[0] que no daria la primera letra  = j
+        // ejemplo: 
+
+
+        console.log(nombre[0][0])
+        console.log(nombre[1][0])
+        console.log(nombre[2][0])
+        console.log(nombre[3][0])
+        console.log(nombre[4][0])
+        console.log(nombre[5][0])
+        
+
+    </script>
+</body>
+</html>
