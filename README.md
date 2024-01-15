@@ -3,7 +3,7 @@
 Este repositorio contiene ejemplos, proyectos y recursos relacionados con mi aprendizaje de JavaScript. Estoy explorando diferentes conceptos y creando pequeños proyectos para mejorar mis habilidades en JavaScript.
 
 
-<img src='https://cdn.discordapp.com/attachments/1195266692079681557/1196294431159095316/Unofficial_JavaScript_logo_2.svg.png?ex=65b71b02&is=65a4a602&hm=38d5ab1c653dfa913d7bade1b179facf0f1c25e1c427a7cd9828ebd55375c16f&'>
+<img src='https://cdn.discordapp.com/attachments/1195266692079681557/1196294431159095316/Unofficial_JavaScript_logo_2.svg.png?ex=65b71b02&is=65a4a602&hm=38d5ab1c653dfa913d7bade1b179facf0f1c25e1c427a7cd9828ebd55375c16f&' width="250">
 
 
 
