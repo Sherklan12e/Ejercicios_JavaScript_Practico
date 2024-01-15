@@ -7,8 +7,15 @@
 </head>
 <body>
     <script>
-        
-
+        let coche = {
+            marca:'toyota',
+            modelo:'nose',
+            ano:2024,
+            obtenerinfo: function (){
+                console.log(`La marca del coche: ${this.marca} el modelo:${this.modelo} y el anio ${this.ano}`)
+            }
+        }
+        coche.obtenerinfo()
 
 
     </script>
