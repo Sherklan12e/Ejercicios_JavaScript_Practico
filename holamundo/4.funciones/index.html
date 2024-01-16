@@ -8,11 +8,16 @@
 <body>
     <script>
         //Funciones
-        function saludar() {
-            console.log('Hola mundo');
+        function saludar(nombre = 'davis') {
 
+            console.log('Hola mundo' + nombre);
+            return `Hola ${nombre}`
         }
-        saludar();
+        saludar('davis');
+//////////////////////////////////////////////////////
+
+
+
 
         function suma(){
             return 2 + 2
@@ -20,6 +25,21 @@
         let resultado = suma()
         console.log(resultado)
         
+
+
+///////////////////////////////////////////////////
+        function  Inventario(nombre){
+            this.nombre = nombre;
+            this.articulos = [];
+        }
+        Inventario.prototype.getNombre = function() { 
+            return this.nombre
+        }
+
+
+////////////////////////////////////////////////////////
+
+
         //Argumentos 
         function suma(a, b){// El a y b son parametros
             return a + b
@@ -27,7 +47,7 @@
         }
         console.log(suma(2,4)) // El 2 y el 4 son argumentos
 
-
+        
 
 
     </script>
