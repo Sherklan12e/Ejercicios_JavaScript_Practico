@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumarNumeros(...numeros){
+            contador = 0
+            for (let numero of numeros){
+                contador =  contador + numero
+            }
+            return contador
+        }
+        numero1 = 4
+        numero2 = 4
+        numero3 = 3
+        console.log(sumarNumeros(numero1, numero2,numero3 ))
+
+    </script>
+</body>
+</html>
