@@ -7,7 +7,23 @@
 </head>
 <body>
     <script>
-        
+        let coche = {
+            modelo:'Linux',
+            marca:'Toyota',
+            anio:2024,
+            cocheinfo: function (){
+                console.log(`El modelo ${this.modelo} la marca ${this.marca} y el anio ${this.anio}`)
+            }
+        }
+
+        coche.cocheinfo()
+
+        coche.modelo = 'perndrive' // Cambio el modelo
+
+
+        coche.cocheinfo()
+
+
     </script>
 </body>
 </html>
