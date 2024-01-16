@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let coche = {
+            modelo:'Trya',
+            marca:'Toyota',
+            anio: 2024,
+        }
+
+        for (let coches in coche){
+            if (coche.hasOwnProperty(coches)){ // elhasOwnProperty verifica si el objeto tiene eso si no devuelve false si esta true
+                console.log(`${coches} : ${coche[coches]}`)
+                
+            }
+        }
+        
+        console.log(coche)
+    
+
+    </script>
+</body>
+</html>
