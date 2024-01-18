@@ -51,10 +51,14 @@
 // // classList.remove('') y nombre de la clase
 // console.log(primerTopping.innerText)
 
-const lista = document.getElementById('lista-toppings')
-const toppingnew = document.createElement('li')
+// const lista = document.getElementById('lista-toppings')
+// const toppingnew = document.createElement('li')
 
-toppingnew.classList.add('topping', 'fondo-marron')
-toppingnew.innerText = 'comida'
-// lista.append(toppingnew) agrega
-// toppingnew.remove(); Elimino 
+// toppingnew.classList.add('topping', 'fondo-marron')
+// toppingnew.innerText = 'comida'
+// // lista.append(toppingnew) agrega
+// // toppingnew.remove(); Elimino 
+// console.log(lista.parentNode.parentElement)
+
+
+//EVENTOS
