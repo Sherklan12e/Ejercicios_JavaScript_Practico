@@ -4,7 +4,10 @@
     margin: 0;
     color: black;
 }
-
+.mi{
+    background-color: red;
+    color: aqua;
+}
 body{
     display: flex;
     justify-content: center;
