@@ -27,6 +27,7 @@ body{
     font-size: 23px;
     border-radius: 10px;
     border: 0px;
+    border-style: none;
     
 }
 .contenedor button{
@@ -35,11 +36,44 @@ body{
     height: 40px;
     width: 110px;
     border-radius: 5px;
-    border: 0px;
     font-size: 20px;
+    border-style: none;
+    color: white;
 }
 .contenedor button:hover{
     cursor: pointer;
     transition: 0.1s;
     width: 120px;
+}
+.dentro{
+    width: 900px;
+    height: 600px;
+    background-color: rgb(246, 203, 170);
+    margin: auto;
+    overflow: auto;
+    word-wrap: break-word; /* Permitir saltos de línea en palabras largas */
+   
+    
+
+}
+
+.tareas{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+    list-style: none;
+}
+.Eliminar{
+    background-color: red;
+    width: 130px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+    border-radius: 50px;
+    border-style: none;
+    color: aliceblue;
+}
+.Eliminar:hover{
+    cursor: pointer;
 }
