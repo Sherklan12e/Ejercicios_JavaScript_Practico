@@ -1,0 +1,38 @@
+*{
+    border: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+body{
+    background-color: #2B807B;
+    height: 100vh;
+    text-align: center;
+}
+.centrar-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedor{
+    background-color: #e9eeee;
+    width: 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 300px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#color{
+    font-size: 70px;
+    font-weight: bold;
+}
+button{
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: red;
+    user-select: none;
+    margin: 5px;
+    border-radius: 20px;
+}
