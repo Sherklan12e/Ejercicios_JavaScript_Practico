@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body class="centrar-flex">
-    <div id="contenedor" class="centrar-flex">
-        <p id="color">#20B807B</p>
-        <button id="cambiar">cambiar color</button>
+    <div class="contenedor-principal">
+        <div class="contenedor-interno">
+            <div class="color">
+                <label for="">Rojo (R)</label>
+                <input id='rojo' type="range" min="0" max="255" value="23" step="1" >
+                <p id="texto-rojo"></p>
+            </div>
+            <div class="color">
+                <label for="">Verde (G)</label>
+                <input id='verde' type="range" min="0" max="255" value="41" step="1" >
+                <p id="texto-verde"></p>
+            </div>
+            <div class="color">
+                <label for="">Azul(R)</label>
+                <input id='azul' type="range" min="0" max="255" value="56" step="1" >
+                <p id="texto-azul"></p>
+            </div>
+        </div>
+
     </div>
     <script src="script.js"></script>
 </body>
