@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: red;
+
+}
+.contenedor-principal{
+    width: 80vw;
+    max-width: 600px;
+    min-height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.contenedor-botones {
+    padding: 20px;
+
+}
+
+
+#cronometro{
+    width: 100%;
+    font-size: 80px;
+    user-select: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.boton {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#boton-inicio-pausa.iniciar,
+#boton-inicio-pausa.iniciar i{
+    background-color: blue;
+}
+
+
+#boton-inicio-pausa.pausar,
+#boton-inicio-pausa.pausar i {
+    background-color: aqua;
+}
+#boton-reiniciar{
+    background-color: red;
+}
