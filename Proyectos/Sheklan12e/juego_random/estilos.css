@@ -109,7 +109,14 @@ boton */
     background-color: aqua;
     border: 1px solid red;
     border-radius: 4px;
-    width: 150px;
+    width: 200px;
     height: 50px;
     cursor: pointer;
+}
+
+.writenumber{
+    font-size: 23px;
+    height: 50px;
+    margin: auto;
+    width: 100px;
 }
