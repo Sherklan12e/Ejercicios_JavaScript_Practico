@@ -4,7 +4,7 @@ const pregunta = document.querySelector('.pregunta')
 const parrafo = document.getElementsByClassName('.imagen')
 
 function random_Num(){
-    return  Math.floor(Math.random() * 20);
+    return  Math.floor(Math.random(1) * 20);
 }
 function detalles(){
     let randomnum = random_Num()
@@ -12,7 +12,7 @@ function detalles(){
     let details = document.createElement('p')
     pregunta.insertAdjacentElement('afterend', details)
     pregunta.remove()
-    details.textContent = 'El jugo trata de Adivinar el numero entre el 1 y el 20 '
+    details.innerHTML = 'El jugo trata de Adivinar el numero entre el 1 y el 20  \nTienes 5 Intentos nomas'
     details.classList.add('pregunta')
 
 
@@ -33,30 +33,52 @@ function detalles(){
 
     console.log(randomnum)
 
-    count = 0
+    count = 1
     botonenviar.addEventListener('click', function(){
-        count ++;
+        
         console.log(count)
         
         if (Input.value == randomnum){
-            let ganaste = document.createElement('p')
-            ganaste.textContent = 'Ganaste'
-            details.insertAdjacentElement('afterend', ganaste)
-        }else if(Input.value > randomnum){
-            let alto = document.createElement('p')
-            alto.textContent = 'El numero es muy grande!! Tu puedes '
-            details.insertAdjacentElement('afterbegin', alto)
+            details.textContent = 'Ganaste '
+            Input.value = ''
+            count ++;
+            
+            
+            let regresar= document.createElement('div')
+            let enlace = document.createElement('a')
+            Input.insertAdjacentElement('afterend', regresar)
+            enlace.classList.add('link')
+            regresar.classList.add('regresar')
+            enlace.textContent = 'Regresar'
+            enlace.href = '/Proyectos/Sheklan12e/juego_random/index.html'
+            regresar.appendChild(enlace)
+            botonenviar.remove()
+            Input.remove()
+        }
+        else if (Input.value ==0){
+            details.textContent = `Por favor escribe un numero del 1 al 20 `
+            Input.value = ''
+        }
+        
+        else if(Input.value > randomnum){
+            details.innerHTML = `El numero es muy grande ctmr <br> intento numero ${count}`
+            Input.value = ''
+            count ++;
             
         } else if (Input.value < randomnum){
-            let pequeno = document.createElement('p')
-            pequeno.textContent = 'El numero es muy pequeño!! Vamo que puedes'
-            details.insertAdjacentElement('afterbegin', pequeno)
+            
+            details.innerHTML = `El numero es muy pequeño!! Vamo que puedes <br>
+            intento numero ${count}`
+            Input.value = ''
+            count ++;
+            
         }
+        
 
 
 
 
-        if (count==5){
+        if (count==6){
             botonenviar.remove()
             let regresar= document.createElement('div')
             let enlace = document.createElement('a')
@@ -65,6 +87,7 @@ function detalles(){
             enlace.textContent = 'Regresar'
             enlace.href = '/Proyectos/Sheklan12e/juego_random/index.html'
             regresar.appendChild(enlace)
+            details.innerHTML = 'Perdiste :c'
 
         }
 
