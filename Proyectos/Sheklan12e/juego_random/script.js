@@ -1,10 +1,26 @@
 const butons = document.getElementById('cambiar-color-id');
 const jugar_buton = document.getElementById('jugar');
 const pregunta = document.querySelector('.pregunta')
-const parrafo = document.getElementsByClassName('.imagen')
+const parrafo = document.querySelector('.imagen')
 const butonNo = document.getElementById('No')
+
+
 butonNo.addEventListener('click', function(){
     pregunta.textContent = 'Ok vete *se pone Trite*'
+    
+    parrafo.style.background = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("imgs/waifu2.png") no-repeat center center/cover`;
+    
+    jugar_buton.remove()
+    let regresar= document.createElement('div')
+    let enlace = document.createElement('a')
+    regresar.classList.add('regresar')
+    enlace.classList.add('link')
+    butonNo.insertAdjacentElement('afterend', regresar)
+    butonNo.remove()
+    enlace.textContent = 'Regresar'
+    enlace.href = '/Proyectos/Sheklan12e/juego_random/index.html'
+    regresar.appendChild(enlace)
+    details.innerHTML = 'Perdiste :c'
     
 })
 function random_Num(){
