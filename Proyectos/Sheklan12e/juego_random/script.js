@@ -2,7 +2,11 @@ const butons = document.getElementById('cambiar-color-id');
 const jugar_buton = document.getElementById('jugar');
 const pregunta = document.querySelector('.pregunta')
 const parrafo = document.getElementsByClassName('.imagen')
-
+const butonNo = document.getElementById('No')
+butonNo.addEventListener('click', function(){
+    pregunta.textContent = 'Ok vete *se pone Trite*'
+    
+})
 function random_Num(){
     return  Math.floor(Math.random(1) * 20);
 }
@@ -33,7 +37,7 @@ function detalles(){
 
     console.log(randomnum)
 
-    count = 1
+    count = 2
     botonenviar.addEventListener('click', function(){
         
         console.log(count)
@@ -61,14 +65,14 @@ function detalles(){
         }
         
         else if(Input.value > randomnum){
-            details.innerHTML = `El numero es muy grande ctmr <br> intento numero ${count}`
+            details.innerHTML = `El numero es muy grande ctmr <br> intento numero <span class='a' > ${count} </span>`
             Input.value = ''
             count ++;
             
         } else if (Input.value < randomnum){
             
             details.innerHTML = `El numero es muy pequeño!! Vamo que puedes <br>
-            intento numero ${count}`
+            intento numero <span class='a' > ${count} </span>`
             Input.value = ''
             count ++;
             
@@ -78,7 +82,7 @@ function detalles(){
 
 
 
-        if (count==6){
+        if (count==7){
             botonenviar.remove()
             let regresar= document.createElement('div')
             let enlace = document.createElement('a')
