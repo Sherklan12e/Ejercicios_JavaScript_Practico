@@ -24,7 +24,7 @@ butonNo.addEventListener('click', function(){
     
 })
 function random_Num(){
-    return  Math.floor(Math.random(1) * 20);
+    return  Math.floor(Math.random(1) * 15);
 }
 function detalles(){
     let randomnum = random_Num()
@@ -32,7 +32,7 @@ function detalles(){
     let details = document.createElement('p')
     pregunta.insertAdjacentElement('afterend', details)
     pregunta.remove()
-    details.innerHTML = 'El jugo trata de Adivinar el numero entre el 1 y el 20  \nTienes 5 Intentos nomas'
+    details.innerHTML = 'El juego trata de Adivinar el numero entre el 1 y el 20  \nTienes 5 Intentos '
     details.classList.add('pregunta')
 
 
@@ -40,7 +40,7 @@ function detalles(){
     let Input = document.createElement('input')
     Input.type = 'number'
     Input.min = 0;
-    Input.max = 20;
+    Input.max = 15;
     Input.classList.add('writenumber')
     jugar_buton.insertAdjacentElement('afterend', Input)
     jugar_buton.remove()
@@ -74,20 +74,24 @@ function detalles(){
             regresar.appendChild(enlace)
             botonenviar.remove()
             Input.remove()
+
+            setTimeout(function(){
+                window.open('https://ar.pinterest.com/', '_blank');
+            }, 2000)
         }
         else if (Input.value ==0){
-            details.textContent = `Por favor escribe un numero del 1 al 20 `
+            details.textContent = `Por favor escribe un numero del 1 al 15 `
             Input.value = ''
         }
         
         else if(Input.value > randomnum){
-            details.innerHTML = `El numero es muy grande ctmr <br> intento numero <span class='a' > ${count} </span>`
+            details.innerHTML = `El numero es muy grande ctmr <br><br><br><br> intento numero <span class='a' > ${count} </span>`
             Input.value = ''
             count ++;
             
         } else if (Input.value < randomnum){
             
-            details.innerHTML = `El numero es muy pequeño!! Vamo que puedes <br>
+            details.innerHTML = `El numero es muy pequeño!! Vamo que puedes <br><br><br><br>
             intento numero <span class='a' > ${count} </span>`
             Input.value = ''
             count ++;
@@ -125,6 +129,7 @@ function detalles(){
 
 jugar_buton.addEventListener('click', function(){
     detalles();
+    butonNo.remove()
     
 })
 
