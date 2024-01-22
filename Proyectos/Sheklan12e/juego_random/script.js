@@ -82,6 +82,8 @@ function detalles(){
             botonenviar.remove()
             let regresar= document.createElement('div')
             let enlace = document.createElement('a')
+            regresar.classList.add('regresar')
+            enlace.classList.add('link')
             Input.insertAdjacentElement('afterend', regresar)
             Input.remove()
             enlace.textContent = 'Regresar'
