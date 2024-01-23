@@ -6,8 +6,9 @@ function funcionRelog(){
     let minutos = fecha.getMinutes()
     let horas = fecha.getHours()
     
-    relog.textContent = ` ${horas} ${minutos} ${segundos} `
+    relog.textContent = ` ${horas}:${minutos}:${segundos} `
+    requestAnimationFrame(funcionRelog)
     
 }
 
-setInterval(funcionRelog , 1000)
+requestAnimationFrame(funcionRelog)
