@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-buton{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-buton button{
+    font-size: 24px;
+    padding: 10px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+#numero{
+    font-size: 33px;
+}

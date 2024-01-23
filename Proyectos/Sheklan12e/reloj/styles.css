@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.relog-contenedor{
+    width: 600px;
+    height: 300px;
+    background-color: aqua;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.relog{
+    width: 100%;
+    background: rebeccapurple;
+    height:110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.relog p{
+    font-size: 30px;
+    font-weight: bold;
+}
