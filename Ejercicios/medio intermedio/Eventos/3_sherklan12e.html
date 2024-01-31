@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos de Ratón</title>
+  <style>
+    #miElemento {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+    }
+
+    #miElemento:hover {
+      
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    
+
+<div id="miElemento">Pasa el ratón sobre mí</div>
+
+<script>
+  // Obtén el elemento por su ID
+  var elemento = document.getElementById("miElemento");
+
+  // Asigna el evento de ratón "mouseover" (entra el ratón)
+  elemento.addEventListener("mouseover", function() {
+    // Cambia el estilo cuando el ratón entra
+    elemento.style.backgroundColor = "lightgreen";
+  });
+
+  // Asigna el evento de ratón "mouseout" (sale el ratón)
+  elemento.addEventListener("mouseout", function() {
+    // Cambia el estilo cuando el ratón sale
+    elemento.style.backgroundColor = "lightblue";
+  });
+</script>
+
 </body>
 </html>
