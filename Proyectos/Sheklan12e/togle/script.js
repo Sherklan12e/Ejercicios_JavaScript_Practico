@@ -5,4 +5,5 @@ document.addEventListener('DOMContentLoaded', function () {
     navbarToggle.addEventListener('click', function () {
         navbarList.classList.toggle('show');
     });
+    console.log('esta mal xd')
 });
