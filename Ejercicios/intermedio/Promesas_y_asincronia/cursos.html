@@ -6,11 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="photos"></div>
     <script>
+        let url = 'https://jsonplaceholder.typicode.com/photos'
+        fetch(url)
+            .then(response => response.json())
+            .then(data => mostrardata(data))
+            .catch(error => console.log(error))
         
+        const mostrardata = (data) => {
+            const photosContainer = document.getElementById('photos');
 
-        
+            // Iterar sobre los datos y crear elementos HTML para cada foto
+            data.forEach(photo => {
+                const photoElement = document.createElement('div');
+                photoElement.innerHTML = `
+                    <h2>${photo.title}</h2>
+                    <img src="${photo.url}" loading="lazy"  alt="${photo.title}">`;
+                photosContainer.appendChild(photoElement);
+            });
+        }
     </script>
 </body>
 </html>
