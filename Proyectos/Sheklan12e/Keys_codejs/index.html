@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        background: linear-gradient(to right, #2e1e4f, #47135e);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: background 0.3s ease-in-out;
+    }
+
+    .key-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+        color: #fff;
+        margin: 2.5rem;
+        min-width: 150px;
+        background: rgba(0, 255, 252, 0.5);
+        box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(2.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: background 0.3s ease-in-out;
+    }
+
+    .key-container h4 {
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .key-content {
+        margin-top: 10px;
+    }
+
+    .container:hover {
+        background: rgba(255, 255, 255, 0.35);
+    }
+
+    .key-container:hover {
+        background: rgba(0, 255, 252, 0.7);
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="key-container" id="keyContainer">
+            <h4 class="animation">Key</h4>
+            <div class="key-content animation"></div>
+
+            <h4 class="animation">Code</h4>
+            <div class="key-content animation"></div>
+
+            <h4 class="animation">Key Code</h4>
+            <div class="key-content animation"></div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('keyContainer')
+
+        container.innerHTML = generateHTML("-", "-", "-")
+
+        window.addEventListener("keydown", (e) => {
+            container.innerHTML = generateHTML(e.key, e.code, e.key.charCodeAt(0))
+        });
+        function generateHTML(key, code, keyCode) {
+            return `
+            <div class="key-container">
+      <h4>Key</h4>
+      <div class="key-content">${key === " " ? "Space" : key}
+      </div>
+    </div>
+
+    <div class="key-container">
+      <h4>Code</h4>
+      <div class="key-content">${code}
+      </div>
+    </div>
+
+    <div class="key-container">
+      <h4>Key Code</h4>
+      <div class="key-content">${keyCode}
+      </div>
+    </div>
+    
+            
+            `
+        }
+
+    </script>
+</body>
+
+</html>

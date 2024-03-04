@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+
+    .container {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background-color: aqua;
+        margin: auto;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+
+    .drop {
+        position: absolute;
+        height: 5rem;
+        width: 5rem;
+        animation: animate 5s linear;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+        -webkit-transition: opacity 7s ease-in-out;
+        -moz-transition: opacity 7s ease-in-out;
+        -o-transition: opacity 7s ease-in-out;
+
+        transition: opacity 7s ease-in-out;
+        
+        animation-name: animate;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: 1;
+            transform: scale(2);
+        }
+
+        25% {
+            border-radius: 25%;
+        }
+
+        50% {
+            transform: scale(3);
+            
+            border-radius: 35%;
+        }
+
+        100% {
+            border: 1px solid black;
+            border-radius: 50%;
+            transform: scale(4);
+        }
+    }
+
+    .yellows {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(7, 7, 7, 0.5); /* Color de fondo semi-transparente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index:2; /* Coloca el overlay por encima de las imágenes */
+    }
+    .bienvenido{
+        width: fit-content;
+        height:fit-content;
+        text-align: center;
+
+    }
+    .bienvenido h1{
+        color: #fff;
+        font-size: 63px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-shadow: 2px 2px 4px rgba(61, 58, 58, 0.766);
+        
+    }
+    .bienvenido h1:hover{
+        cursor: pointer;
+        text-shadow: 13px 2px 12px rgba(0, 0, 0, 0.993);
+    }
+        
+
+    
+
+    @media screen and (max-width: 600px) {
+        @keyframes animate {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            25% {
+                border-radius: 25%;
+            }
+
+            50% {
+                transform: scale(2);
+
+                border-radius: 35%;
+            }
+
+            100% {
+                border: 1px solid black;
+                border-radius: 50%;
+                transform: scale(2);
+            }
+        }
+    }
+    .H{
+        animation: moverh 2s ease infinite;
+        display: inline-block;
+    }
+    @keyframes moverh{
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-20px);
+        }
+        100%{
+            transform: translate(0);
+        }
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="yellows">
+            <div class="bienvenido">
+                <h1> Hola Dev Bienvenido<span class="H">!</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const contenedor = document.querySelector('.container')
+
+        function randoms() {
+            const nuevo = document.createElement('span')
+            nuevo.classList.add('drop')
+            nuevo.style.top = ((Math.random() * contenedor.clientHeight)) + 'px'
+            nuevo.style.left = ((Math.random() * contenedor.clientWidth)) + 'px'
+            nuevo.style.marginInline = 100 + 'px'
+
+            console.log(nuevo.style.top)
+            numero = Math.floor(Math.random() * 12) + 1
+            nuevo.style.backgroundImage = `url(images/${numero}.jpg)`
+            setTimeout(() => {
+                nuevo.remove()
+            }, 5000)
+            contenedor.appendChild(nuevo)
+        }
+        setInterval(randoms, 500)
+    </script>
+</body>
+
+</html>
